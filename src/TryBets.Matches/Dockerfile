@@ -14,4 +14,4 @@ COPY --from=build-env /app/out .
 
 EXPOSE 5502
 
-ENTRYPOINT ["dotnet", "TryBets.dll"]
+ENTRYPOINT ["dotnet", "TryBets.Matches.dll"]

@@ -39,10 +39,10 @@ public class BetRepository : IBetRepository
 
         Bet createdBet = _context.Bets.Include(b => b.Team).Include(b => b.Match).Where(b => b.BetId == newBet.BetId).FirstOrDefault()!;
         
-        if (findedMatch.MatchTeamAId == betRequest.TeamId) findedMatch.MatchTeamAValue += betRequest.BetValue;
-        else findedMatch.MatchTeamBValue += betRequest.BetValue;
-        _context.Matches.Update(findedMatch);
-        _context.SaveChanges();
+        // if (findedMatch.MatchTeamAId == betRequest.TeamId) findedMatch.MatchTeamAValue += betRequest.BetValue;
+        // else findedMatch.MatchTeamBValue += betRequest.BetValue;
+        // _context.Matches.Update(findedMatch);
+        // _context.SaveChanges();
 
         return new BetDTOResponse
         {
